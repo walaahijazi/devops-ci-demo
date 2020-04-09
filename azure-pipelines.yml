@@ -16,5 +16,7 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     pwd
-    ls -al 
+    ls -al
+    bash ./check.sh
+    bash ./deploy.sh 
   displayName: 'Run a multi-line script'

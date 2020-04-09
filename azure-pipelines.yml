@@ -18,7 +18,7 @@ steps:
     echo See https://aka.ms/yaml
     echo noor
     echo lolo
-    echo aseel
+    
 
   displayName: 'Run a multi-line script'
 

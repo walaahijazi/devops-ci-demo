@@ -1,0 +1,23 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+# Triggers
+trigger:
+- master
+
+# Pools
+pool:
+  vmImage: 'ubuntu-latest'
+
+# Steps
+steps:
+
+- script: echo Hello, ICT DevOPs!
+  displayName: 'Run a one-line script'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo Learn more about YAML!
+  displayName: 'Run a multi-line script'

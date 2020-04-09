@@ -19,6 +19,6 @@ steps:
     ls -al
     echo Running "./check.sh" script
     bash ./check.sh
-    echo Running "./check.sh" script
+    echo Running "./deploy.sh" script
     bash ./deploy.sh 
   displayName: 'Run a multi-line script'

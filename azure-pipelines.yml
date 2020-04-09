@@ -10,13 +10,15 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world! I am a one-line script.
+- script: echo Hello, HTU! I am a one-line script.
   displayName: 'Run a one-line script'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     pwd
     ls -al
+    echo Running "./check.sh" script
     bash ./check.sh
+    echo Running "./check.sh" script
     bash ./deploy.sh 
   displayName: 'Run a multi-line script'

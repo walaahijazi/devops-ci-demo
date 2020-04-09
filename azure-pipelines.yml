@@ -20,4 +20,5 @@ steps:
 - script: |
     echo Let us add more tasks to build, test, and deploy our project.
     echo Learn more about YAML!
+    echo noor
   displayName: 'Run a multi-line script'

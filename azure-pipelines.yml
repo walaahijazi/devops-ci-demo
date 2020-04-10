@@ -13,14 +13,6 @@ steps:
 - script: echo Hello,htu!
   displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-    echo noor
-    echo lolo
-    echo soso 
-    echo h hope i find u all well
-    
-
-  displayName: 'Run a multi-line script'
+- script: bash build.sh
+  displayName: 'Run build script'
 

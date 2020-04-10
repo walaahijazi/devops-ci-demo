@@ -19,6 +19,7 @@ steps:
     echo noor
     echo lolo
     echo soso 
+    echo h hope i find u all well
     
 
   displayName: 'Run a multi-line script'

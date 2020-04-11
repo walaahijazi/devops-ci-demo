@@ -18,7 +18,8 @@ steps:
 - task: CopyFilesOverSSH@0
   inputs:
     sshEndpoint: 'lolo@13.82.25.235'
-    contents: 'web/'
+    sourceFolder: 'web/'
+    contents: '**'
     targetFolder: '/var/www/html'
     readyTimeout: '20000'
     failOnEmptySource: true

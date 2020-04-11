@@ -1,12 +1,4 @@
 # Starter pipeline
-- task: CopyFilesOverSSH@0
-  inputs:
-    sshEndpoint: 'lolo@13.82.25.235'
-    sourceFolder: 'web/'
-    contents: '**'
-    targetFolder: '/var/www/html'
-    readyTimeout: '20000'
-    failOnEmptySource: true
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -26,7 +18,7 @@ steps:
 - task: CopyFilesOverSSH@0
   inputs:
     sshEndpoint: 'lolo@13.82.25.235'
-    contents: 'web/**'
+    contents: 'web/'
     targetFolder: '/var/www/html'
     readyTimeout: '20000'
     failOnEmptySource: true

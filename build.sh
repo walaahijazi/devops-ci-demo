@@ -10,7 +10,7 @@ GIT-REPO=devops-ci-demo
 GIT-BRANCH=$(git branch | sed -n -e 's/^\* \(. *\)/\1/p')
 PWD=$(PWD)
 USER=$(USER)
-sed "s/{SERVER_NAME}/${HOSTNAM}/g" web/index.html
+sed "s/{SERVER_NAME}/${HOSTNAME}/g" web/index.html
 sed -i "s/{TIMESTAMP}/$T/g" web/index.html
 sed -i "s/{GIT-BRANCH}/${GIT-BRANCH}/g" web/index.html
 sed -i "s/{GIT-REPO}/${GIT-REPO}/g" web/index.html

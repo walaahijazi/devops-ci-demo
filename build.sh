@@ -4,7 +4,7 @@ echo "running this build script"
 echo "i am $HOSTNAME"
 echo "the time is $(date +%m-%d-%Y)"
 echo "the logged user is $USER"
-SERVER_NAME=$(hostname)
+SERVER=$(HOSTNAME)
 TIMESSTAMP=$(date +"%m-%d-%Y")
 GIT-REPO=devops-ci-demo
 GIT-BRANCH=$(git branch | sed -n -e 's/^\* \(. *\)/\1/p')

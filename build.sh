@@ -6,8 +6,8 @@ echo "the time is $(date +%m-%d-%Y)"
 echo "the logged user is $USER"
 SERVER_NAME=$(hostname)
 TIMESSTAMP=$(date +%m-%d-%Y)
-GIT-REPO="devops-ci-demo"
-GIT-BRANCH=$(git branch | sed -n -e 's/^\* \(. *\)/\1/p'
+GIT-REPO=devops-ci-demo
+GIT-BRANCH=$(git branch | sed -n -e 's/^\* \(. *\)/\1/p')
 PWD=$(PWD)
 USER=$name
 sed "s/{SERVER_NAME}/$SERVER_NAME/g"index.html

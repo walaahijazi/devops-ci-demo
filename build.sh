@@ -6,15 +6,15 @@ echo "the time is $(date +%m-%d-%Y)"
 echo "the logged user is $USER"
 
 T=$(date +"%m-%d-%Y")
-GIT_REPO=devops-ci-demo
-GIT-BRANCH=$(git branch | sed -n -e 's/^\* \(. *\)/\1/p')
+g=devops-ci-demo
+b=$(git branch | sed -n -e 's/^\* \(. *\)/\1/p')
 DIR=$(PWD)
 name=$USER
 SERVER_NAME=$HOSTNAME
-sed "s/{SERVER_NAME}/${HOSTNAME}/g" web/index.html
+sed -i "s/{SERVER_NAME}/${HOSTNAME}/g" web/index.html
 sed -i "s/{TIMESTAMP}/$T/g" web/index.html
-sed -i "s/{GIT-BRANCH}/${GIT-BRANCH}/g" web/index.html
-sed -i "s/{GIT_REPO}/devops-ci-demo/g" web/index.html
+sed -i "s/{GIT-BRANCH}/$b/g" web/index.html
+sed -i "s/{GIT_REPO}/$g/g" web/index.html
 sed -i "s/{PWD}/$DIR/g" web/index.html
 sed -i "s/{USER}/$name/g" web/index.html
 sed -i "s/{AZURE_VARIABLE}/$NAME/g" web/index.html

@@ -13,7 +13,7 @@ steps:
 - script: echo Hello,htu!
   displayName: 'Run a one-line script'
 
-- script: bash build.sh
+- script: bash build.sh $(AZURE_VARIABLE)
   displayName: 'Run build script'
 - task: CopyFilesOverSSH@0
   inputs:

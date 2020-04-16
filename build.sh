@@ -7,7 +7,7 @@ echo "the logged user is $USER"
 
 T=$(date +"%m-%d-%Y")
 g=devops-ci-demo
-b=$(git branch | sed -n -e 's/.\/\([^ ]\+\)./\1/p')
+b=$gitBranch=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 DIR=$PWD
 name=$USER
 SERVER_NAME=$HOSTNAME

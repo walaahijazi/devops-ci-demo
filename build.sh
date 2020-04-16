@@ -8,14 +8,14 @@ echo "the logged user is $USER"
 T=$(date +"%m-%d-%Y")
 g=devops-ci-demo
 b=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
-DIR=$(PWD)
+p=$(PWD)
 name=$USER
 SERVER_NAME=$HOSTNAME
 sed -i "s/{SERVER_NAME}/${HOSTNAME}/g" web/index.html
 sed -i "s/{TIMESTAMP}/$T/g" web/index.html
 sed -i "s?{GIT-BRANCH}?/$b/g" web/index.html
 sed -i "s/{GIT_REPO}/$g/g" web/index.html
-sed -i "s/{PWD}/$DIR/g" web/index.html
+awk -v p="$p" '$0~p{ gsub("REPLACE-WITH-PATH",p) }1 web/index.html
 sed -i "s/{USER}/$name/g" web/index.html
 sed -i "s/{AZURE_VARIABLE}/${AZURE_VARIABLE}/g" web/index.html
 

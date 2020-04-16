@@ -17,6 +17,6 @@ sed -i "s/{GIT-BRANCH}/$b/g" web/index.html
 sed -i "s/{GIT_REPO}/$g/g" web/index.html
 sed -i "s/{PWD}/$DIR/g" web/index.html
 sed -i "s/{USER}/$name/g" web/index.html
-sed -i "s/{AZURE_VARIABLE}/$NAME/g" web/index.html
+sed -i "s/{AZURE_VARIABLE}/${AZURE_VARIABLE}/g" web/index.html
 
 

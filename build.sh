@@ -15,7 +15,7 @@ sed -i "s/{SERVER_NAME}/${HOSTNAME}/g" web/index.html
 sed -i "s/{TIMESTAMP}/$T/g" web/index.html
 sed -i "s?{GIT-BRANCH}?/$b/g" web/index.html
 sed -i "s/{GIT_REPO}/$g/g" web/index.html
-sed "s@TEMPDIR@$PWD@"web/index.html
+sed "s@TEMPDIR@$PWD@" web/index.html
 sed -i "s/{USER}/$name/g" web/index.html
 sed -i "s/{AZURE_VARIABLE}/${AZURE_VARIABLE}/g" web/index.html
 

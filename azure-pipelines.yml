@@ -23,3 +23,15 @@ steps:
     targetFolder: '/var/www/html'
     readyTimeout: '20000'
     failOnEmptySource: true
+- task: GitHubRelease@1
+  inputs:
+    gitHubConnection: 'walaahijazi'
+    repositoryName: 'walaahijazi/devops-ci-demo'
+    action: 'create'
+    target: '$(Build.SourceVersion)'
+    tagSource: 'gitTag'
+    changeLogCompareToRelease: 'lastFullRelease'
+    changeLogType: 'commitBased'
+
+
+    

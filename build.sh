@@ -11,10 +11,10 @@ GIT-BRANCH=$(git branch | sed -n -e 's/^\* \(. *\)/\1/p')
 DIR=$(PWD)
 name=$USER
 server=$HOSTNAME
-sed "s/{SERVER_NAME}/${HOSTNAME} /g" web/index.html
+sed "s/{SERVER_NAME}/${HOSTNAME}/g" web/index.html
 sed -i "s/{TIMESTAMP}/$T/g" web/index.html
-sed -i "s/{GIT-BRANCH}/${GIT-BRANCH} /g" web/index.html
-sed -i "s/{GIT-REPO}/${GIT-REPO} /g" web/index.html
-sed -i "s/{PWD}/${DIR} /g" web/index.html
-sed -i "s/{USER}/${name} /g" web/index.html
+sed -i "s/{GIT-BRANCH}/${GIT-BRANCH}/g" web/index.html
+sed -i "s/{GIT-REPO}/$(GIT-REPO)/g" web/index.html
+sed -i "s/{PWD}/$DIR/g" web/index.html
+sed -i "s/{USER}/$name/g" web/index.html
 

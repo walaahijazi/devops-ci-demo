@@ -10,11 +10,11 @@ g=devops-ci-demo
 DIR=$PWD
 name=$USER
 SERVER_NAME=$HOSTNAME
-branch= $(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+b= $(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 sed -i "s/{SERVER_NAME}/${HOSTNAME}/g" web/index.html
 sed -i "s/{TIMESTAMP}/$T/g" web/index.html
 sed -i "s/{GIT_REPO}/$g/g" web/index.html
-sed -i "s/{GIT_BRANCH}/${branch}/g" web/index.html
+sed -i "s/{GIT_BRANCH}/$b/g" web/index.html
 sed -i "s~{PWD}~$DIR~g" web/index.html
 sed -i "s/{USER}/$name/g" web/index.html
 sed -i "s/{AZURE_VARIABLE}/${AZURE_VARIABLE}/g" web/index.html

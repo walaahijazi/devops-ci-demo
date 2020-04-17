@@ -18,7 +18,7 @@ steps:
 - task: CopyFilesOverSSH@0
   inputs:
     sshEndpoint: 'lolo@40.117.249.24'
-    sourceFolder: 'build/'
+    sourceFolder: 'web/'
     contents: '**'
     targetFolder: '/var/www/html'
     readyTimeout: '20000'

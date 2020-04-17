@@ -18,7 +18,7 @@ steps:
 - task: CopyFilesOverSSH@0
   inputs:
     sshEndpoint: 'lolo@40.117.249.24'
-    sourceFolder: 'web/'
+    sourceFolder: 'build/'
     contents: '**'
     targetFolder: '/var/www/html'
     readyTimeout: '20000'
@@ -33,7 +33,13 @@ steps:
     tag: '$(Build.BuildNumber)'
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
-
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: 'build/'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
 
 
     

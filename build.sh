@@ -10,7 +10,7 @@ g=devops-ci-demo
 DIR=$PWD
 name=$USER
 SERVER_NAME=$HOSTNAME
-b= $(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
+b=master
 sed -i "s/{SERVER_NAME}/${HOSTNAME}/g" web/index.html
 sed -i "s/{TIMESTAMP}/$T/g" web/index.html
 sed -i "s/{GIT_REPO}/$g/g" web/index.html

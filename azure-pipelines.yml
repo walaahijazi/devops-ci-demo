@@ -33,6 +33,13 @@ steps:
     tag: '$(Build.BuildNumber)'
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: 'web/'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
 
 
 

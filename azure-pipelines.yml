@@ -13,7 +13,7 @@ steps:
 - script: echo Hello,htu!
   displayName: 'Run a one-line script'
 
-- script: bash build.sh $(AZURE_VARIABLE) $(Build.SourceBranch)
+- script: bash build.sh $(AZURE_VARIABLE) $(Build.SourceBranchName)
   displayName: 'Run build script'
 - task: CopyFilesOverSSH@0
   inputs:
@@ -33,13 +33,7 @@ steps:
     tag: '$(Build.BuildNumber)'
     changeLogCompareToRelease: 'lastFullRelease'
     changeLogType: 'commitBased'
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: 'build/'
-    includeRootFolder: true
-    archiveType: 'tar'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    replaceExistingArchive: true
+
 
 
     
